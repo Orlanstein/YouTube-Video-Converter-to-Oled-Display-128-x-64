@@ -317,12 +317,35 @@ class VideoConverter(ctk.CTk):
                 self.local_output_entry.configure(state="readonly")
     
     def process_youtube(self):
-        # Aquí iría la lógica para procesar el video de YouTube
-        pass
-        
+        # Obtener valores de las entradas de YouTube
+        linkVideoYT = self.url_entry.get()  # Entrada de la URL del video
+        pathVideoOutput = self.output_entry.get()  # Entrada de la carpeta de salida
+
+        if not linkVideoYT.strip():
+            print("Error: No se ha proporcionado una URL.")
+        elif not pathVideoOutput.strip():
+            print("Error: No se ha seleccionado una carpeta de salida.")
+        else:
+            # Imprimir en la consola los valores capturados
+            print("URL del Video:", linkVideoYT)
+            print("Carpeta de Salida:", pathVideoOutput)
+
+
+            
     def process_local(self):
-        # Aquí iría la lógica para procesar el video local
-        pass
+        # Obtener valores de las entradas locales
+        file_path = self.file_entry.get()  # Ruta del archivo de video
+        output_folder = self.local_output_entry.get()  # Carpeta de salida
+
+        if not file_path.strip():
+            print("Error: No se ha seleccionado un archivo de video.")
+        elif not output_folder.strip():
+            print("Error: No se ha seleccionado una carpeta de salida.")
+        else:
+            # Imprimir en la consola los valores capturados
+            print("Archivo de Video:", file_path)
+            print("Carpeta de Salida:", output_folder)
+
 
 if __name__ == "__main__":
     app = VideoConverter()

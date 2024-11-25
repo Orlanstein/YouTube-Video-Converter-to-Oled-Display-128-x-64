@@ -8,7 +8,7 @@ from VideoProcessing.VIdeoDownloader import descargar_video
 from VideoProcessing.VideoToBinaryVideo import convert_video_to_binary_bw
 from VideoProcessing.BinVidToCodeTxt import video_to_oled_data
 
-def ConvertFromYouTube(linkYTVideo):
+def ConvertFromYouTube(linkYTVideo, pathOutputVideo):
     # Descarga el video
     descargar_video(linkYTVideo)
 
@@ -37,4 +37,12 @@ def ConvertFromLocalVideo(pathLocalVideo):
     convert_video_to_binary_bw(ruta_video_descargado, ruta_videoReescalado_BW)
 
     #Covierte video en BW y reescalado a un txt
-    video_to_oled_data(ruta_videoReescalado_BW, ruta_txt_salida)  
+    video_to_oled_data(ruta_videoReescalado_BW, ruta_txt_salida) 
+
+
+def main():
+    linkVideo = "https://www.youtube.com/watch?v=tuTjVyfSx1s"
+    ConvertFromYouTube(linkVideo)
+     
+if __name__ == "__main__":
+    main()
