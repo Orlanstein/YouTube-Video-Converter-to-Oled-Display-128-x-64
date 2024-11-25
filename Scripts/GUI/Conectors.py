@@ -7,6 +7,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from VideoProcessing.VIdeoDownloader import descargar_video
 from VideoProcessing.VideoToBinaryVideo import convert_video_to_binary_bw
 from VideoProcessing.BinVidToCodeTxt import video_to_oled_data
+from VideoFilesTrasher.DeleteVideosGenerated import eliminar_Video
+from VideoFilesTrasher.DeleteVideosGenerated import eliminar_VideoReescalado_BW
 
 def convertFromYoutube(linkYTVideo, pathOutputVideo):
     # Descarga el video
@@ -22,7 +24,11 @@ def convertFromYoutube(linkYTVideo, pathOutputVideo):
 
     print("Generando archivo TXT...")
     video_to_oled_data(ruta_videoReescalado_BW, ruta_txt_salida)
-    print(f"Archivo TXT generado en: {ruta_txt_salida}")   
+    print(f"Archivo TXT generado en: {ruta_txt_salida}")  
+    
+    #Elimino los archivos que ya no necesito
+    eliminar_Video()
+    eliminar_VideoReescalado_BW() 
 
 def convertFromLocalVideo(pathLocalVideo, pathOutputVideo):
     # Rutas de entrada y salida
@@ -36,7 +42,11 @@ def convertFromLocalVideo(pathLocalVideo, pathOutputVideo):
     convert_video_to_binary_bw(ruta_video_descargado, ruta_videoReescalado_BW)
 
     #Covierte video en BW y reescalado a un txt
-    video_to_oled_data(ruta_videoReescalado_BW, ruta_txt_salida) 
+    video_to_oled_data(ruta_videoReescalado_BW, ruta_txt_salida)
+    
+    #Elimino los archivos que ya no necesito
+    eliminar_Video()
+    eliminar_VideoReescalado_BW()  
 
 
 def main():
