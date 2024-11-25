@@ -39,13 +39,11 @@ pip install yt-dlp
 ## Uso
 ### Conversión de video de YouTube
 ![Imagen 1](InterfazYoutube.png)
-![Imagen 2](InterfazVideoLocal.jpg)
+
 
 
 ### Conversión de video local
-```python
-python converter.py --local <RUTA_DEL_VIDEO>
-```
+![Imagen 2](InterfazVideoLocal.jpg)
 
 ## Configuración de Arduino
 1. Copiar el archivo de texto generado a tu sketch
