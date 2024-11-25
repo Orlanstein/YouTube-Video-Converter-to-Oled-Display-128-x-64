@@ -43,7 +43,7 @@ pip install yt-dlp
 
 
 ### Conversión de video local
-![Imagen 2](/Images/InterfazVideoLocal.jpg)
+![Imagen 2](/Images/InterfazVideoLocal.png)
 
 ## Configuración de Arduino
 1. Copiar el archivo de texto generado a tu sketch
