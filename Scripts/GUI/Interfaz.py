@@ -1,4 +1,6 @@
 import customtkinter as ctk
+import sys
+import os
 from pathlib import Path
 from tkinter import filedialog
 
@@ -316,7 +318,17 @@ class VideoConverter(ctk.CTk):
                 self.local_output_entry.insert(0, folder)
                 self.local_output_entry.configure(state="readonly")
     
+    
+
+    
     def process_youtube(self):
+        # Agregar el directorio raíz del proyecto al path
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        sys.path.append(project_root)
+
+        # Ahora importa los módulos
+        from GUI.Conectors import convertFromYoutube
+        
         # Obtener valores de las entradas de YouTube
         linkVideoYT = self.url_entry.get()  # Entrada de la URL del video
         pathVideoOutput = self.output_entry.get()  # Entrada de la carpeta de salida
@@ -327,12 +339,20 @@ class VideoConverter(ctk.CTk):
             print("Error: No se ha seleccionado una carpeta de salida.")
         else:
             # Imprimir en la consola los valores capturados
+            convertFromYoutube(linkVideoYT, pathVideoOutput)
             print("URL del Video:", linkVideoYT)
             print("Carpeta de Salida:", pathVideoOutput)
 
 
             
     def process_local(self):
+        # Agregar el directorio raíz del proyecto al path
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        sys.path.append(project_root)
+
+        # Ahora importa los módulos
+        from GUI.Conectors import convertFromLocalVideo
+        
         # Obtener valores de las entradas locales
         file_path = self.file_entry.get()  # Ruta del archivo de video
         output_folder = self.local_output_entry.get()  # Carpeta de salida
@@ -343,6 +363,7 @@ class VideoConverter(ctk.CTk):
             print("Error: No se ha seleccionado una carpeta de salida.")
         else:
             # Imprimir en la consola los valores capturados
+            convertFromLocalVideo(file_path, output_folder)
             print("Archivo de Video:", file_path)
             print("Carpeta de Salida:", output_folder)
 
