@@ -38,9 +38,9 @@ pip install yt-dlp
 
 ## Uso
 ### Conversión de video de YouTube
-```python
-python converter.py --youtube <URL_DEL_VIDEO>
-```
+![Imagen 1](InterfazYoutube.png)
+![Imagen 2](InterfazVideoLocal.jpg)
+
 
 ### Conversión de video local
 ```python
