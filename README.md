@@ -26,6 +26,15 @@ git clone https://github.com/tu-usuario/YouTube-Video-Converter-to-Oled-Display-
 ```bash
 pip install pytube opencv-python numpy
 ```
+```bash
+pip install customtkinter
+```
+```bash
+pip install opencv-python
+```
+```bash
+pip install yt-dlp
+```
 
 ## Uso
 ### Conversión de video de YouTube
