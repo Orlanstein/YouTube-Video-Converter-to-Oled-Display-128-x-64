@@ -21,6 +21,7 @@ def eliminar_Video():
     else:
         print(f"El archivo {ruta_video_descargado} no existe.")
         
+#Nice
 def eliminar_VideoReescalado_BW():
     if os.path.exists(ruta_videoReescalado_BW):
         os.remove(ruta_videoReescalado_BW)  # Elimina el archivo
