@@ -3,6 +3,19 @@
 ## Descripción del Proyecto
 Este proyecto permite convertir videos de YouTube o videos locales en un formato de texto compatible con sketches de Arduino, específicamente optimizado para pantallas OLED de 128x64 píxeles.
 
+## Mejor rendimiento en esp32
+Dadas las caracteristicas de memoria de los arduinos es mejor usar una esp32
+
+### Ejemplo con el siguiente video:
+
+https://www.youtube.com/watch?v=HBXNnXCm0gU
+
+![ImagenVideoEjemplo](https://img.youtube.com/vi/HBXNnXCm0gU/0.jpg)
+
+### Imagen de ejemplo
+![Imagen 3](/Images/ExampleOfVideoInEsp32.png)
+
+
 ## Características
 - Conversión de videos de YouTube
 - Conversión de videos locales
