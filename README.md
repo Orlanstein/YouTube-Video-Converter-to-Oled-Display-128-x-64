@@ -58,9 +58,13 @@ pip install yt-dlp
 ### Conversión de video local
 ![Imagen 2](/Images/InterfazVideoLocal.png)
 
-## Configuración de Arduino
-1. Copiar el archivo de texto generado a tu sketch
-2. Cargar el archivo en la pantalla OLED utilizando las bibliotecas adecuadas
+## Configuración de la esp32 corriendo en Arduino IDE
+1. Conectar el display oled a la esp32
+   
+   ![Imagen 3](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/05/ESP32_OLED.png?w=873&quality=100&strip=all&ssl=1)
+
+2. Copiar el siguiente archivo
+
 ```c
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -110,6 +114,12 @@ void loop() {
     currentFrame = (currentFrame + 1) % FRAME_COUNT;
   }
 }
+```
+
+3. Copiar el archivo generado en la parte donde dice el
+
+```c
+//PEGAR AQUI EL CONTENIDO GENERADO POR EL TXT
 ```
 
 ## Contribuciones
