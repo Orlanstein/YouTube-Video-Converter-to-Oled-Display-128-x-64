@@ -51,6 +51,10 @@ pip install yt-dlp
 
 ## Uso
 ### Conversión de video de YouTube
+
+1. Pegar el enlace del link del video de youtube en el apartado correspondiente
+2. Seleccionar la carpeta donde se guardara el archivo generado usando el boton de "examinar"
+
 ![Imagen 1](/Images/InterfazYoutube.png)
 
 
@@ -116,7 +120,7 @@ void loop() {
 }
 ```
 
-3. Copiar el archivo generado en la parte donde dice el
+3. Copiar el codigo del archivo generado en la parte donde dice el
 
 ```c
 //PEGAR AQUI EL CONTENIDO GENERADO POR EL TXT
@@ -126,4 +130,4 @@ void loop() {
 Las contribuciones son bienvenidas. Por favor, abre un issue o realiza un pull request.
 
 ## Licencia
-[Especificar la licencia, por ejemplo: MIT License]
+[AGPL-3.0 license]
